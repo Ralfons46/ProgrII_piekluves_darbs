@@ -129,7 +129,7 @@ var firebaseConfig tiek iedoti, izveidojot lokālo datubāzi. Atliek tikai uztai
 
 Bibliotēku pieimportēšana un skriptu pieimportēšana notiek šādi:
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
 
