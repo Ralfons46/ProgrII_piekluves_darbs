@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Bootstrapa pieimportēšana-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Pieteikums konsultācijām</title>
+</head>
+
+<body>
+  <!-- Navigācijas pogas ar redirect uz noteiktajām web vietnēm-->
+  <header>
+  <h2>
+    <div style="position:relative; left:0px; top:0px">
+      <img class="logo" src="jvg.jpg" alt="">
+    </div>
+  </h2>
+  <nav class="navigation">
+    <a href="https://jvg.edu.lv/">JVĢ mājaslapa</a>
+    <a href="index.html.html">Konsultāciju grafiks</a>
+    <button class="btnLogin-popup">Pieslēgties</button>
+    <!-- Pogai "Pieslēgties" vajadzēja savienojumu ar e-klasi, lai skolēniem nevajadzētu pieteikuma lapā visu laiku par jaunu rakstīt savu vārdu uzvārdu-->
+  </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center>
+  <!-- Ievades lauki, kurus nolasīs RealTime database ar nosaukumu Firebase. Tās vietne, kur veidoju datubāzi - https://firebase.google.com/-->
+  <input type="txtId" id="vards" style="width: 500px" /></input>
+    Jūsu vārds uzvārds
+  <br><br><br>
+  <input type="txtId" id="macprieksmets" style="width: 500px" /></input>
+    Mācību priekšmets
+  <br><br><br>
+  <input type="txtId" id="konsultdiena" style="width: 500px" /></input>
+    Konsultāciju diena
+  <br><br><br>
+  <input type="txtId" id="konsultdiena" style="width: 500px" /></input>
+    Konsultāciju laiks
+  <br><br><br>
+    <!-- Poga, kas iesniedz datus Firebase datubāzē, to uzspiežot dati fetchojas tevis izveidotajā datu bāze vietnē Firebase-->
+  <button id="send">Iesniegt pieteikumu</button>
+    <br>
+<!-- Kods ar tekstu, kurš paskaidro problēmu-->
+    <a>Tā kā vietne atrodas izstrādāšanas procesā, lūdzu ievadiet datus stingri pēc konsultāciju grafika un ja rodas kļūdas - ziņojiet vietnes izstrādātājam.</a>
+  </center>
+  <script type="module">
+    //Mana Firebase visi dati, lai gūtu piekļuvi datu saglabāšanai uz datubāzi
+    var firebaseConfig = {
+      apiKey: "AIzaSyD9oJsD3sYD7J5ggJUPLssFXJI0C5qNhgU",
+      authDomain: "test-f9a5a.firebaseapp.com",
+      //ProjectId ir manas datubāzes tiešais nosaukums test-f9a5a
+      projectId: "test-f9a5a",
+      storageBucket: "test-f9a5a.appspot.com",
+      messagingSenderId: "912892423769",
+      appId: "1:912892423769:web:c9ce48cce67c5718948b48"
+    };
+
+    //Norāda parametrus, kurus nolasa un saglabā datubāzē
+    firebase.initializeApp(firebaseConfig);
+    var firebaseDati = firebase.database().ref('vards', 'macprieksmets', 'konsultdiena', 'konsultlaiks');
+    document.querySelector("#send").addEventListener('click', () => {
+      var firebaseDati = document.getElementById("vards', 'macprieksmets', 'konsultdiena', 'konsultlaiks").value;
+      //Ievadītos datus ar PUSH metodi nogādā datu bāzē
+      firebaseDati.push(vards, macprieksmets, konsultdiena, konsultlaiks);
+    })
+  </script>
+<!-- Pieimportēti scripti. Šos skriptus iedod manuāli, kā tu izveido datubāzi Firebase vietnē-->
+  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
+</body>
+
+</html>

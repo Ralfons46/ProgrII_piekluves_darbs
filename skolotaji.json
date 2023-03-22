@@ -1,0 +1,57 @@
+[
+    {
+        "vards": "Ilze",
+        "uzvards": "Blumberga",
+        "prieksmets": "Ķīmija",
+        "kabinets": "254. kabinets",
+        "kons1": "15:40 - 16:20",
+        "kons2": "Nenotiek",
+        "kons3": "Nenotiek",
+        "kons4": "8:15 - 8:55",
+        "kons5": "Nenotiek"
+      },
+      {
+        "vards": "Raivis",
+        "uzvards": "Alunāns",
+        "prieksmets": "Programmēšana",
+        "kabinets": "336. kabinets",
+        "kons1": "14:50 - 15:30",
+        "kons2": "8:15 - 8:55",
+        "kons3": "16:30 - 17:10",
+        "kons4": "Nenotiek",
+        "kons5": "Nenotiek"
+      },
+      {
+        "vards": "Nadīna",
+        "uzvards": "Vasiļjeva",
+        "prieksmets": "Matemātika",
+        "kabinets": "232. kabinets",
+        "kons1": "8:15 - 8:55",
+        "kons2": "14:50 - 15:30",
+        "kons3": "Nenotiek",
+        "kons4": "14:50 - 15:30",
+        "kons5": "15:40 - 16:20"
+      },
+      {
+        "vards": "Mairis",
+        "uzvards": "Bocmanis",
+        "prieksmets": "Angļu valoda",
+        "kabinets": "111. kabinets",
+        "kons1": "Nenotiek",
+        "kons2": "Nenotiek",
+        "kons3": "15:40 - 16:20",
+        "kons4": "14:50 - 15:30",
+        "kons5": "Nenotiek"
+      },
+      {
+        "vards": "Silvija",
+        "uzvards": "Freimane",
+        "prieksmets": "Latviešu valoda",
+        "kabinets": "134. kabinets",
+        "kons1": "15:40 - 16:20",
+        "kons2": "8:15 - 8:55",
+        "kons3": "Nenotiek",
+        "kons4": "Nenotiek",
+        "kons5": "9:05 - 9:45"
+      }
+    ]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <!-- Fontu un stilu pieimportēšana -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"/>
+  <title>Konsultāciju grafiks</title>
+</head>
+
+  <!-- dataShowing - atļauj aktivizēties funkcijai no index.js, lai izvietotu JSON faila datus HTML tabulā-->
+<body onload="dataShowing()">
+  
+  <header id="headers">
+  <h2>
+    <div style="position:relative; left:0px; top:0px">
+      <!-- Bildes ievietošana hederā-->
+      <img class="logo" src="jvg.jpg" alt="">
+    </div>
+  </h2>
+    <!-- Navigācijas pogas ar redirect uz noteiktajām web vietnēm-->
+  <nav class="navigation">
+    <a href="https://jvg.edu.lv/">JVĢ mājaslapa</a>
+    <a href="pieteikumalapa.html">Pieteikums konsultācijām</a>
+    <!-- Pogai "Pieslēgties" vajadzēja savienojumu ar e-klasi, lai skolēniem nevajadzētu pieteikuma lapā visu laiku par jaunu rakstīt savu vārdu uzvārdu-->
+    <button class="btnLogin-popup">Pieslēgties</button>
+  </nav>
+  </header>
+  
+  <br><br><br><br><br>
+
+  <!-- Tabula, kurā atrodas JSON dati-->
+  <div class="container">
+      <table id="datu_tabula">
+        <thead>
+          <tr>
+            <th>Skolotāja vārds</th>
+            <th>Skolotāja uzvārds</th>
+            <th>Priekšmets</th>
+            <th>Kabinets</th>
+            <th>Pirmdiena</th>
+            <th>Otrdiena</th>
+            <th>Trešdiena</th>
+            <th>Ceturtdiena</th>
+            <th>Piektdiena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <br><br>
+  
+<!-- Ar pogas palīdzību redirect uz otru HTML lappusi, lai aizpildītu datus par pieteikšanos uz konsultācijām-->
+  <a href="pieteikumalapa.html">  
+    <button>Pieteikties konsultācijām</button>  
+  </a>
+
+  </body>
+  <!-- Savienojums ar index.js, lai ar funkcijas palīdzību varētu iznest JSON datus tabulā-->
+  <script src="./index.js"></script>
+</html>
+
