@@ -20,15 +20,24 @@ function dataShowing() {
           "beforeend",
           `
             <tr>
-              <td>${row["vards"]}</td>    
-              <td>${row["uzvards"]}</td>    
-              <td>${row["prieksmets"]}</td>    
-              <td>${row["kabinets"]}</td>    
+              <td>${row["vards"]}</td> 
+              
+              <td>${row["uzvards"]}</td>
+              
+              <td>${row["prieksmets"]}</td>
+              
+              <td>${row["kabinets"]}</td> 
+              
               <td>${row["kons1"]}</td>   
+              
               <td>${row["kons2"]}</td>
+              
               <td>${row["kons3"]}</td>   
+              
               <td>${row["kons4"]}</td>
+              
               <td>${row["kons5"]}</td>   
+              
             </tr>
            `
         );
