@@ -9,15 +9,25 @@ Vietne, kurā skolēni var pieteikties uz konsultācijām elektroniski.
 
 JSON izvade uz HTML tabulu:
 
+
 function dataShowing() {
+
   const getJsonHttpRequest = new XMLHttpRequest();
+  
   getJsonHttpRequest.onreadystatechange = (data) => {
+  
     if (data.target.readyState == 4 && data.target.status === 200) {
+    
       const jsonData = JSON.parse(data.target.responseText);
+      
       const myTable = document.querySelector("#datu_tabula");
+      
       jsonData.forEach((row) => {
+      
         myTable.insertAdjacentHTML(
+        
           "beforeend",
+          
           `
             <tr>
               <td>${row["vards"]}</td> 
@@ -39,15 +49,25 @@ function dataShowing() {
               <td>${row["kons5"]}</td>   
               
             </tr>
+            
            `
+           
         );
+        
       });
+      
     }
+    
   };
+  
   // Iegūst datus no skolotāji.json un izvada tos
+  
   getJsonHttpRequest.open("GET", "./skolotaji.json");
+  
   getJsonHttpRequest.send();
+  
 }
+
   
   
   
