@@ -88,70 +88,126 @@ header {
   z-index: 99;
   
   Hover un navigācijas pogas:
+  
   .navigation a {
+  
   position: relative;
+  
   font-size: 1.1em;
+  
   color:#ddc5c5;
+  
   text-decoration: none;
+  
   font-weight: 500;
+  
   margin-left: 40px;
+  
 }
 
 .navigation a::after {
+
   content: '';
+  
   position: absolute;
+  
   left: 0;
+  
   bottom: -6px;
+  
   width: 100%;
+  
   height: 3px;
+  
   background: #fff;
+  
   border-radius: 5px;
+  
   transform: scaleX(0);
+  
   transition: transform .3s;
+  
 }
 
+
 .navigation a:hover::after {
+
   transform: scaleX(1);
+  
 }
 
 .navigation .btnLogin-popup {
+
   width: 100px;
+  
   height: 30px;
+  
   background: transparent;
+  
   border: 2px solid #ddc5c5;
+  
   outline: none;
+  
   border-radius: 6px;
+  
   cursor: pointer;
+  
   font-size: 1.1em;
+  
   color: #ddc5c5;
+  
   font-weight: 500;
+  
   margin-left: 40px;
+  
   transition: .3s;
+  
 }
 
 .navigation .btnLogin-popup:hover {
+
   background: #474747;
+  
   color: #ddc5c5;
+  
 }
 
 
 Un datu saglabāšanas scripts, kurš saglabā datus FireBase datubāzē (Datubāze lokāla un viegli izveidojama)
+
+
 var firebaseConfig = {
+
       apiKey: "AIzaSyD9oJsD3sYD7J5ggJUPLssFXJI0C5qNhgU",
+      
       authDomain: "test-f9a5a.firebaseapp.com",
+      
       //ProjectId ir manas datubāzes tiešais nosaukums test-f9a5a
+      
       projectId: "test-f9a5a",
+      
       storageBucket: "test-f9a5a.appspot.com",
+      
       messagingSenderId: "912892423769",
+      
       appId: "1:912892423769:web:c9ce48cce67c5718948b48"
+      
     };
+    
 //Norāda parametrus, kurus nolasa un saglabā datubāzē
+
     firebase.initializeApp(firebaseConfig);
+    
     var firebaseDati = firebase.database().ref('vards', 'macprieksmets', 'konsultdiena', 'konsultlaiks');
+    
     document.querySelector("#send").addEventListener('click', () => {
+    
       var firebaseDati = document.getElementById("vards', 'macprieksmets', 'konsultdiena', 'konsultlaiks").value;
+      
       //Ievadītos datus ar PUSH metodi nogādā datu bāzē
+      
       firebaseDati.push(vards, macprieksmets, konsultdiena, konsultlaiks);
+      
       
 var firebaseConfig tiek iedoti, izveidojot lokālo datubāzi. Atliek tikai uztaisīt funkciju ar kuras palīdzību nogādāt datus uz datubāzi.
 
